@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+# Panel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Vista de escritorio
+<img src="./public/escritorio.png" alt="Vista de la pagina principal para computadora" width="600" />
 
-## Available Scripts
+# Vista tableta
+<img src="./public/tableta.png" alt="Vista de la pagina para tabletas" width="400" />
 
-In the project directory, you can run:
+# Vista móvil
+<img src="./public/telefono.png" alt="Vista de la pagina para telefonos" width="300" />
 
-### `npm start`
+# Creacion del proyecto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Este proyecto fue creado con el comando
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+npx create-react-app 4-react-panel --template typescript
+```
 
-### `npm test`
+No utiliza librerias externas a react, solo estilos css
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Componentes
 
-### `npm run build`
+Este proyecto cuenta con 4 componetes:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `CardComentario` Componente que renderiza un comentario sobre una tienda, muestra el nombre de la tienda una imagen, fecha de emision de comentario y el comentario hecho
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `Filtro` Simulacion de filtro, que incluye un campo input texto y uno ded fecha ambos incluyen estilos con la pseudo clase `active` que hace que los inputs se escalen
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `ItemResumen` Componente que muestra cifras resumidas con efecto `hover`
 
-### `npm run eject`
+- `Sidebar` Barra lateral dinamica que en pantallas pequenas se vuelve horizontal y scrolleable
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Estilos
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Se dividieron en:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `global` estilos pequenos que podrian reutilizarse varias veces dentro del proyecto
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- `content` para el contenido del panel
 
-## Learn More
+- `grid` para el sistema de regillas usado
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `sidebar` Estilos de la barra lateral
